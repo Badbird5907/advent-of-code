@@ -9,7 +9,7 @@ def checkValid(beforeDict, update):
               return False
     return True
 def fix(beforeDict, update):
-    print(f"Fixing {update}")
+    # print(f"Fixing {update}")
     for i in range(len(update)): # for each number
         num = update[i]
         if not num in beforeDict:  # Add this check
@@ -22,7 +22,7 @@ def fix(beforeDict, update):
           if val not in beforeDict[num]: # if the number is supposed to be before
               # swap
               update[i], update[j] = update[j], update[i]
-    print(update)
+    # print(update)
     return update
 with open("input.txt", "r") as f:
     lines = f.read().splitlines()

@@ -14,13 +14,9 @@ for l in lines:
 
 
 def check(expected, nums, idx, val, two = False):
-    # print(" " * i + "Checking", idx, val, nums)
     if (idx == len(nums)): # reached all
-        # print(" " * i + " -> ", res)
         return val == expected
     return check(expected, nums, idx + 1, val + nums[idx]) or check(expected, nums, idx + 1, val * nums[idx]) or (two and check(expected, nums, idx + 1, int(str(val) + str(nums[idx]))))
-
-# print(check(100, [1, 10, 10], 1, 1))
 
 def run(two):
     total =0
@@ -39,6 +35,6 @@ def run(two):
     print(total)
 
 print("One:")
-run(True)
-print("Two:")
 run(False)
+print("Two:")
+run(True)
